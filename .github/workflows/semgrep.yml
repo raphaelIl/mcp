@@ -30,6 +30,6 @@ jobs:
           python -m pip install --require-hashes --requirement .github/workflows/semgrep-requirements.txt
       - run: semgrep scan --config auto --sarif-output semgrep.sarif.json --no-error --dryrun --verbose
       - name: Upload Semgrep scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@9ee088e13615f8d1eaef4766f9dde95d3356a8f6 # v4.31.9
+        uses: github/codeql-action/upload-sarif@4d40c930727a20bd5f499d0d0f5d855d1844040a # v4.31.9
         with:
           sarif_file: semgrep.sarif.json
